@@ -17,7 +17,7 @@ public class Socio {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(name = "nombre")
     private String nombre;
@@ -28,11 +28,11 @@ public class Socio {
     @OneToMany(mappedBy = "socio", cascade = CascadeType.ALL)
     private List<Barco> barcos;
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

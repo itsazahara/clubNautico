@@ -20,7 +20,7 @@ public class Barco {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @NotNull
     @Column(name = "matricula")
@@ -42,11 +42,11 @@ public class Barco {
     @OneToMany(mappedBy = "barco", cascade = CascadeType.ALL)
     private List<Salida> salidas;
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
